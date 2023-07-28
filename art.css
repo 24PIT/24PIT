@@ -1,0 +1,159 @@
+header {
+  background-color: #202020;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero {
+  background-image: url('24\ PIT.jpg'); /* استبدل بمسار الصورة الكبيرة */
+  background-size: cover; /* جعل الصورة تغطي كامل الخلفية */
+  background-position: center center;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+
+    
+
+.hero-content { 
+  max-width: 1000px;
+  padding: 20px;
+  height: 10px
+
+}
+
+.hero h1 {
+  font-family: "Futurist Fixed-width", sans-serif;
+  color: floralwhite;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #4c4d75;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: #fff;
+  padding: 20px 40px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: "Futurist Fixed-width", sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s; /* إضافة الانتقال لتحويل العنصر */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* إضافة الظل الافتراضي */
+}
+
+.btn:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* تحويل الظل عند تحويم الماوس عليه */
+  transform: scale(1.5); /* تكبير العنصر عند تحويم الماوس عليه */
+}
+
+
+
+
+.hero * {
+  margin-bottom: -100px;
+}
+
+
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.gallery img {
+  max-width: 300px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #202020;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.instagram-link img {
+  width: 70px;
+  height: 70px;
+}
+
+.instagram-link img:hover{
+
+  transform: scale(1.1);
+ 
+}
+
+.logo {
+  float: right;
+  width: 155px; /* قم بتغيير العرض حسب الحجم المطلوب */
+  margin-right: 20px; /* إضافة هوامش من اليمين للشعار */
+}
+
+.logo:hover {
+
+  transform: scale(1.3);
+
+}
+
+
+
+.contact-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.4s ease; /* إضافة انتقال التحويل */
+}
+
+.contact-btn a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1); /* تكبير حجم العنصر عند التحويم */
+}
+
+.image-container {
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s; /* إضافة انتقال للتأثير السلس */
+}
+
+.image-container img:hover {
+  transform: scale(1.1); /* تكبير الصورة عند تحويم الماوس عليها */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* تحويل الظل عند تحويم الماوس عليها */
+}
+
