@@ -57,21 +57,23 @@ nav a {
 }
 
 .btn {
-  background-image: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
   color: #fff;
   padding: 20px 40px;
   text-decoration: none;
   border-radius: 10px;
   margin-bottom: 10px;
   font-family: "Futurist Fixed-width", sans-serif;
-  transition: transform 0.3s, box-shadow 0.3s; /* إضافة الانتقال لتحويل العنصر */
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* إضافة الظل الافتراضي */
+  transition: transform 0.3s; /* إزالة الانتقال للظل */
+  /* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); */ /* إزالة الظل الافتراضي */
 }
 
 .btn:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* تحويل الظل عند تحويم الماوس عليه */
-  transform: scale(1.5); /* تكبير العنصر عند تحويم الماوس عليه */
+  transform: scale(1.1); /* تكبير العنصر عند تحويم الماوس عليه */
 }
+
+
 
 
 
@@ -81,17 +83,6 @@ nav a {
 }
 
 
-
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.gallery img {
-  max-width: 300px;
-  margin: 10px;
-}
 
 footer {
   background-color: #202020;
@@ -143,25 +134,63 @@ footer {
   transform: scale(1.1); /* تكبير حجم العنصر عند التحويم */
 }
 
-.image-container {
-  display: inline-block;
-  margin: 10px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s; /* إضافة انتقال للتأثير السلس */
+
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 2vh 0; /* استخدام وحدة vh للهوامش العلوية والسفلية */
 }
 
-.image-container img:hover {
-  transform: scale(1.1); /* تكبير الصورة عند تحويم الماوس عليها */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* تحويل الظل عند تحويم الماوس عليها */
+.gallery img {
+  max-width: 20vw; /* استخدام وحدة vw للقياسات العرضية */
+  margin: 1em; /* استخدام وحدة em للهوامش */
 }
 
 
+
+/* تطبيق تكبير الصورة في الوسط عند تحويم الماوس */
+
+
+
+.gallery img {
+  --g: 4px;     /* the gap */
+  --b: 12px;    /* border thickness */
+  --normal-color: rgb(35, 49, 75); /* the normal color */
+  --hover-color: #b9b9b9; /* the hover color */
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: #03030300 0 25%, var(--normal-color) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale( 0%);
+  transition: .3s;
+  transform-origin: center center; /* تعيين مركز التحويل */
+}
+
+.gallery img:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+  transform: scale(1.1); /* تكبير الصورة عند تحويم الماوس */
+  z-index: 1; /* تجعل الصورة في الأمام لتظهر فوق الصور الأخرى */
+  --_c: #03030300 0 25%, var(--hover-color) 0 50%;
+}
 
 
 body {
-  background-image: url('ARAR.jpg');
+  background-image: url('space.jpg'); /* استبدل 'space.jpg' بمسار صورة الفضاء */
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* تجميد الخلفية عند التمرير */
+  background-position: center; /* توسيط الصورة في الشاشة */
 }
+
+
+
+
+
