@@ -190,6 +190,41 @@ body {
   background-position: center; /* توسيط الصورة في الشاشة */
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* ارتفاع العنصر يكون ارتفاع الشاشة بالكامل */
+}
+
+.line {
+  font-family: 'Wendy One', sans-serif;
+  color: white; /* لون النص */
+  cursor: pointer;
+  position: relative;
+  text-shadow: -6px 6px 0 #186e67, -9px 9px 0 purple; /* لون الظلال */
+  font-size: 4vw; /* تعديل وحدة القياس لتناسب عرض الشاشة */
+}
+
+.line:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -10px;
+  left: -4px;
+  transform: scaleX(0);
+  box-shadow: 0 5px 0 #186e67, 0 10px 0 purple; /* لون خلفية الخط */
+  background: white; /* لون الخلفية */
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.line:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 
 
